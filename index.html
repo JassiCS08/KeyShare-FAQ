@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>How to delete your account | KeyShare faq</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo512.png" />
+    <style>
+      .active {
+        border-bottom: 3px solid #028599;
+      }
+      .active span {
+        color: #028599;
+      }
+      .grayScale {
+        filter: grayscale(1);
+      }
+      .platform {
+        cursor: pointer;
+      }
+
+      .platform:not(.active):hover {
+        background-color: #f0f2f5;
+        border-radius: 0.6rem;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="flex justify-start items-center gap-2 p-3 pb-2 cursor-pointer border-b border-gray shadow"
+    >
+      <img class="w-10 h-10" src="./assets/logo512.png" alt="KeyShare" />
+      <span class="text-[1.06rem] font-semibold">KeyShare</span>
+    </header>
+
+    <div class="flex-col justify-center max-w-5xl mx-auto">
+      <section class="p-4">
+        <div class="flex justify-between items-center">
+          <h1 class="p-2 text-[1.5rem] font-bold text-[#050505]">
+            How to delete your account
+          </h1>
+
+          <!-- Copy Link -->
+          <div
+            class="p-2 h-10 bg-[#f0f2f5] flex justify-center items-center gap-1 rounded-[10px] cursor-pointer hover:bg-[#ebecee] select-none"
+            onclick="copyToClipboard()"
+          >
+            <img class="w-4 h-4" src="./assets/copy.png" alt="copy" />
+            <span
+              id="copyButton"
+              class="text-[0.938rem] font-semibold hidden sm:inline"
+              >Copy link</span
+            >
+          </div>
+        </div>
+
+        <!-- Platforms -->
+        <div class="p-3 pb-0 flex mt-2 border-b border-gray-300 select-none">
+          <div
+            class="platform flex justify-center items-center gap-1 active h-10 w-[100px] p-1"
+          >
+            <img class="w-5 h-5" src="./assets/android.png" alt="android" />
+            <span class="text-[0.938rem] font-semibold text-[#65676b]"
+              >Android</span
+            >
+          </div>
+          <div
+            class="platform flex justify-center items-center gap-1 h-10 w-[100px] p-1"
+          >
+            <img class="w-5 h-5 grayScale" src="./assets/iOS.png" alt="iOS" />
+            <span class="text-[0.938rem] font-semibold text-[#65676b]"
+              >iOS</span
+            >
+          </div>
+        </div>
+
+        <!-- Heads Up -->
+        <div class="p-4">
+          <p class="text-[#050505] text-[1.0625rem]">
+            You can delete your account from within KeyShare Mobile App.
+          </p>
+
+          <p class="text-[#050505] text-[1.0625rem] my-4">
+            Deleting your account is irreversible. We can’t reverse this even if
+            you delete it by accident.
+          </p>
+          <div class="text-[1.0625rem] leading-[1.1765]">
+            <p class="rounded-[10px] bg-[#f0f2f5] py-4 pl-6 max-w wrap">
+              <span class="font-bold">Note</span>: You can only delete your
+              account from your primary device, not from linked devices.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="p-4">
+          <!-- Steps -->
+          <div class="mx-auto bg-white p-6 pt-1">
+            <h2 class="text-2xl font-semibold mb-4">To delete your account</h2>
+            <!-- Android -->
+            <ol class="list-inside space-y-2 text-[1.0625rem]" id="android">
+              <li><span class="mr-1">1.</span>Open KeyShare.</li>
+              <li class="text-[1.0625rem] inline-flex flex-wrap items-center">
+                <span class="mr-1">2.</span> Tap More options
+                <img
+                  class="w-7 h-5 px-1"
+                  src="./assets/hamburger.png"
+                  alt="more"
+                />
+                <span class="ml-1"> &gt; Settings</span>
+                <span class="ml-1"> &gt; Account</span>
+                <span class="ml-1"> &gt; Delete my account.</span>
+              </li>
+              <li><span class="mr-1">3.</span>Enter your Passcode</li>
+              <li><span class="mr-1">4.</span>Type Delete in the Text box</li>
+              <li><span class="mr-1">5.</span>Tap <b>Delete account</b>.</li>
+            </ol>
+
+            <!-- iOS -->
+            <ol class="list-inside space-y-2 text-[1.0625rem] hidden" id="ios">
+              <li><span class="mr-1">1.</span>Open KeyShare. IOS</li>
+              <li class="text-[1.0625rem] inline-flex flex-wrap items-center">
+                <span class="mr-1">2.</span> Tap More options
+                <img
+                  class="w-7 h-5 px-1"
+                  src="./assets/hamburger.png"
+                  alt="more"
+                />
+                <span class="ml-1"> &gt; Settings</span>
+                <span class="ml-1"> &gt; Account</span>
+                <span class="ml-1"> &gt; Delete my account.</span>
+              </li>
+              <li><span class="mr-1">3.</span>Enter your Passcode</li>
+              <li><span class="mr-1">4.</span>Type Delete in the Text box</li>
+              <li><span class="mr-1">5.</span>Tap <b>Delete account</b>.</li>
+            </ol>
+          </div>
+
+          <div class="mx-auto bg-white p-6">
+            <h2 class="text-xl font-semibold mb-4">
+              Deleting your account will:
+            </h2>
+            <div class="pl-5">
+              <ol class="list-disc list-inside space-y-2 text-[1.0625rem]">
+                <li>Delete your account from KeyShare and all your devices.</li>
+                <li>Erase your message history.</li>
+                <li>Delete your Account backup.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Consequences -->
+          <div class="mx-auto bg-white p-6">
+            <h2 class="text-2xl font-semibold mb-4">
+              If you delete your account:
+            </h2>
+            <div class="pl-5">
+              <ul
+                class="list-disc list-inside text-[#050505] text-[1.0625rem] space-y-2"
+              >
+                <li>You can't regain access to your account.</li>
+                <li>
+                  It may take up to 90 days from the beginning of the deletion
+                  process to delete your information. Copies of your information
+                  may also remain after the 90 days in the backup storage that
+                  we use to recover in the event of a disaster, software error,
+                  or other data loss event. Your information isn't available to
+                  you during this time.
+                </li>
+                <li>
+                  It doesn't affect your information users have relating to you.
+                  For example, their copy of the messages you sent them.
+                </li>
+                <li>
+                  We may retain certain log data in our databases even after you
+                  delete your account, but such data will be disassociated from
+                  any identifying information such that it can no longer be
+                  linked to your account. To do this we regularly wipe certain
+                  identifying information from this log data. We also replace
+                  any instance of your account ID with a replacement identifier
+                  which can't be linked back to your account once it is deleted.
+                </li>
+                <li>
+                  We may also keep your information for things like legal
+                  issues, terms violations, or harm prevention efforts.
+                </li>
+                <li>
+                  Please refer to our Privacy Policy for more information.
+                </li>
+                <li>
+                  Your information shared with other organisations will also be
+                  deleted.
+                </li>
+              </ul>
+            </div>
+            <p class="text-[#050505] mt-4 text-[1.0625rem]">
+              Your conversation history may still visible to organisation you
+              have interated with.
+            </p>
+            <p class="text-[#050505] mt-4 text-[1.0625rem]">
+              But no personal information will be accessible by them.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      document.querySelectorAll(".platform").forEach((item) => {
+        item.addEventListener("click", () => {
+          document.querySelectorAll(".platform").forEach((el) => {
+            el.classList.remove("active");
+            el.querySelector("img").classList.add("grayScale");
+          });
+          item.classList.add("active");
+          item.querySelector("img").classList.remove("grayScale");
+          if (item.querySelector("span").textContent.trim() === "Android") {
+            document.getElementById("android").style.display = "block";
+            document.getElementById("ios").style.display = "none";
+          } else if (item.querySelector("span").textContent.trim() === "iOS") {
+            document.getElementById("android").style.display = "none";
+            document.getElementById("ios").style.display = "block";
+          }
+        });
+      });
+
+      function copyToClipboard() {
+        const currentURL = window.location.href;
+        const textarea = document.createElement("textarea");
+        textarea.value = currentURL;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = 0;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        document.getElementById("copyButton").innerText = "Copied";
+        setTimeout(() => {
+          document.getElementById("copyButton").innerText = "Copy link";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
